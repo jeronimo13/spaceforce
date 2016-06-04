@@ -1,0 +1,17 @@
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/tractorsfactory/Desktop/Space Shooter/obj/Debug/Assembly-CSharp.dll
+/Users/tractorsfactory/Desktop/Space Shooter/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/UnityEngine.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/UnityEditor.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Mono.Cecil.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Unity.DataContract.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/tractorsfactory/Desktop/Space Shooter/Temp/bin/Debug/Mono.Cecil.Mdb.dll
