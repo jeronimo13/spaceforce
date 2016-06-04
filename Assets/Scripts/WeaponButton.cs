@@ -15,7 +15,7 @@ public class WeaponButton : MonoBehaviour {
 		// Use this for initialization
 		void Start () 
 		{
-		playerController  = GameObject.Find ("Player").GetComponent<PlayerController> ();
+			playerController  = GameObject.Find ("Player").GetComponent<PlayerController> ();
 			SetButton ();
 		}
 
@@ -28,6 +28,7 @@ public class WeaponButton : MonoBehaviour {
 
 		public void OnClick()
 		{
+
 		int money = PlayerConditions.money;
 		if (money >= playerController.weapons [weaponNumber].cost) {
 
