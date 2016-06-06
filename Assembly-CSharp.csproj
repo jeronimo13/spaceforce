@@ -65,6 +65,11 @@
      <Compile Include="Assets\Scripts\PlayerConditions.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RandomRotator.cs" />
+     <Compile Include="Assets\Scripts\Spline\DebugUtils.cs" />
+     <Compile Include="Assets\Scripts\Spline\MathUtils.cs" />
+     <Compile Include="Assets\Scripts\Spline\SplineController.cs" />
+     <Compile Include="Assets\Scripts\Spline\SplineInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Spline\SplineNodeProperties.cs" />
      <Compile Include="Assets\Scripts\SplitMeshIntoTriangles.cs" />
      <Compile Include="Assets\Scripts\WeaponButton.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
