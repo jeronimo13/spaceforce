@@ -82,6 +82,7 @@ public class GameController : MonoBehaviour
 		StartCoroutine (SpawnTriangle (0.5f));
 		yield return new WaitForSeconds (5f);
 
+		SpawnHazard (hazards [4], 0, new HazardConfig ());
 	}
 
 	private IEnumerator SpawnAngleLine (int count, float xPosition, float angle, float zOffset, float delayBetween)
