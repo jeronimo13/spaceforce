@@ -9,10 +9,10 @@ public class GameController : MonoBehaviour
 
 	public GameObject[] hazards;
 	public Vector3 spawnValues;
-//	public int hazardCount;
-//	public float spawnWait;
+	//	public int hazardCount;
+	//	public float spawnWait;
 	public float startWait;
-//	public float waveWait;
+	//	public float waveWait;
 
 	public GUIText scoreText;
 	public GameObject restartButton;
@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
 
 
 	private float initialHealth;
+
 	void Start ()
 	{
 		initialHealth = health;
@@ -66,12 +67,19 @@ public class GameController : MonoBehaviour
 //			}
 //		}
 
-		StartCoroutine (SpawnAngleLine (5, 7, 30, -4, 0.5f));
-		yield return new WaitForSeconds (3f);
-		StartCoroutine (SpawnAngleLine (5, -7, -45, -3, 0.5f));
-		yield return new WaitForSeconds (4f);
-		StartCoroutine (SpawnAngleLine (5, 7, 45, -7, 0.5f));
-		yield return new WaitForSeconds (1f);
+		StartCoroutine (SpawnPathLine (5, -20, -4, 0.7f, "FromLeft", 16));
+		yield return new WaitForSeconds (9);
+
+		StartCoroutine (SpawnPathLine (5, 20, -4, 0.7f, "FromRight", 16));
+
+		yield return new WaitForSeconds (9);
+
+		StartCoroutine (SpawnPathLine (5, 20, -4, 0.7f, "FromRight", 13));
+		yield return new WaitForSeconds (9);
+//		StartCoroutine (SpawnAngleLine (5, -7, -45, -3, 0.5f));
+//		yield return new WaitForSeconds (4f);
+//		StartCoroutine (SpawnAngleLine (5, 7, 45, -7, 0.5f));
+//		yield return new WaitForSeconds (1f);
 
 		StartCoroutine (SpawnLine (-3, 3, 0.5f));
 		yield return new WaitForSeconds (3f);
@@ -85,6 +93,27 @@ public class GameController : MonoBehaviour
 		SpawnHazard (hazards [4], 0, new HazardConfig ());
 	}
 
+
+
+	private void SpawnPathHazard (GameObject hazardToSpawn, float xPosition, float zOffset, string pathName, float time)
+	{
+		Vector3 spawnPosition = new Vector3 (xPosition, spawnValues.y, spawnValues.z + zOffset);
+		Quaternion spawnRotation = Quaternion.Euler (0, 0, 0);
+		GameObject hazard = Instantiate (hazardToSpawn, spawnPosition, spawnRotation) as GameObject;
+		MoveObjectByPath script = hazard.AddComponent <MoveObjectByPath> () as MoveObjectByPath;
+		script.pathName = pathName;
+		script.time = time;
+	}
+
+	private IEnumerator SpawnPathLine (int count, float xPosition, float zOffset, float delayBetween, string pathName, float time)
+	{
+		for (int i = 0; i < count; i++) {
+			SpawnPathHazard (hazards [6], xPosition, zOffset, pathName, time);
+			yield return new WaitForSeconds (delayBetween);
+		}
+	}
+
+
 	private IEnumerator SpawnAngleLine (int count, float xPosition, float angle, float zOffset, float delayBetween)
 	{
 		for (int i = 0; i < count; i++) {
@@ -97,7 +126,10 @@ public class GameController : MonoBehaviour
 	{
 		Vector3 spawnPosition = new Vector3 (xPosition, spawnValues.y, spawnValues.z + zOffset);
 		Quaternion spawnRotation = Quaternion.Euler (0, angle, 0);
-		Instantiate (hazardToSpawn, spawnPosition, spawnRotation);
+		GameObject hazard = Instantiate (hazardToSpawn, spawnPosition, spawnRotation) as GameObject;
+		MoveObjectByPath script = hazard.AddComponent <MoveObjectByPath> () as MoveObjectByPath;
+		script.pathName = "FromLeft";
+		script.time = 20;
 	}
 
 
@@ -150,7 +182,7 @@ public class GameController : MonoBehaviour
 
 	public void RestartGame ()
 	{
-		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 
 	public void HitPlayer (int damage, Collider player)
@@ -169,7 +201,7 @@ public class GameController : MonoBehaviour
 		if (health < 0) {
 			health = 0;
 		}
-		healthText.text = "Health: " + Mathf.Round(health/initialHealth * 100) + "%";
+		healthText.text = "Health: " + Mathf.Round (health / initialHealth * 100) + "%";
 	}
 
 	private bool isAlive ()

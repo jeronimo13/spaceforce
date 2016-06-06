@@ -59,24 +59,28 @@
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\LoadLevelWithProgress.cs" />
      <Compile Include="Assets\Scripts\Manuver.cs" />
+     <Compile Include="Assets\Scripts\MoveObjectByPath.cs" />
      <Compile Include="Assets\Scripts\MoveOnStart.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\NewAbility.cs" />
      <Compile Include="Assets\Scripts\PlayerConditions.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RandomRotator.cs" />
-     <Compile Include="Assets\Scripts\Spline\DebugUtils.cs" />
-     <Compile Include="Assets\Scripts\Spline\MathUtils.cs" />
-     <Compile Include="Assets\Scripts\Spline\SplineController.cs" />
-     <Compile Include="Assets\Scripts\Spline\SplineInterpolator.cs" />
-     <Compile Include="Assets\Scripts\Spline\SplineNodeProperties.cs" />
      <Compile Include="Assets\Scripts\SplitMeshIntoTriangles.cs" />
      <Compile Include="Assets\Scripts\WeaponButton.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\WeaponObject\MakeWeaponObject.cs" />
      <Compile Include="Assets\Scripts\WeaponObject\WeaponObject.cs" />
+     <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
+     <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
+     <Compile Include="Assets\iTweenEditor\iTween.cs" />
+     <Compile Include="Assets\iTweenEditor\iTweenEvent.cs" />
+     <Compile Include="Assets\iTweenEditor\iTweenPath.cs" />
+     <None Include="Assets\iTweenEditor\README.txt" />
      <None Include="Assets\Shader\Shield.shader" />
-     <None Include="Assets\PowerUps Vol 1 Free\Readme.txt" />
+     <None Include="Assets\Prefabs\PowerUps Vol 1 Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

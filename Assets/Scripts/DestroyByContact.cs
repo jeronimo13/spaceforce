@@ -42,7 +42,9 @@ public class DestroyByContact : MonoBehaviour
 
 		if (other.tag == "Player") {
 			gameController.HitPlayer (damage, other);
-			this.GetComponent<HealthController>().Explode();
+			if (!this.CompareTag ("Blast")) {
+				this.GetComponent<HealthController>().Explode();
+			}
 		}
 		
 		if (other.tag == "Blast") {
