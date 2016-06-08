@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\WeaponObject\MakeWeaponObject.cs" />
      <Compile Include="Assets\Scripts\WeaponObject\WeaponObject.cs" />
+     <Compile Include="Assets\StopOverlap.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
